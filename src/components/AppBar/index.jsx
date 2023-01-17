@@ -62,6 +62,20 @@ function AppBar({ expand, onChange, drawerWidth }) {
         },
       ],
     },
+    {
+      key: "/departments/record",
+      icon: <UserOutlined />,
+      title: t("sidebar.departments"),
+      activeRoutes: ["/departments/record"],
+      children: [
+        {
+          key: "/departments/record",
+          icon: <UserOutlined />,
+          title: t("sidebar.departments_record"),
+          path: "/departments/record",
+        },
+      ],
+    },
   ];
   const flatItems = [];
   menuItems.forEach((item) => {

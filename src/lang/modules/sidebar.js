@@ -5,5 +5,7 @@ export default {
     employees: "الموظفين",
     employees_record: "سجل الموظفين",
     add: "إضافة",
+    departments: "الأقسام",
+    departments_record: "سجل الأقسام",
   },
 };

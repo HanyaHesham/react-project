@@ -9,7 +9,6 @@ export default function NavItem({ icon, title, ...restProps }) {
         alignItems: "center",
         height: "40px",
         marginBottom: "10px",
-        border: "1px solid #ddd",
         padding: "0 10px",
         borderRadius: "10px",
       }}
