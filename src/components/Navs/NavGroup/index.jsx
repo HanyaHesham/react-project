@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ArrowDownOutlined, ArrowUpOutlined } from "@ant-design/icons";
+import { DownOutlined, UpOutlined } from "@ant-design/icons";
 export default function NavItemGroup({
   icon,
   title,
@@ -13,22 +13,19 @@ export default function NavItemGroup({
     setToggle(active);
   }, [active]);
   return (
-    <ul className="nav-group" {...restProps} style={{ padding: "0 5px" }}>
-      <li
-        onClick={() => setToggle(!toggle)}
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          cursor: "pointer",
-        }}
-      >
+    <ul
+      className="nav-group"
+      {...restProps}
+      style={{ height: !toggle && "20px" }}
+    >
+      <li onClick={() => setToggle(!toggle)} className="nav-group-item">
         <div>
-          <span>{icon}</span>
+          <span style={{ marginInlineEnd: "5px" }}>{icon}</span>
           <span>{title}</span>
         </div>
-        {!toggle ? <ArrowDownOutlined /> : <ArrowUpOutlined />}
+        {!toggle ? <DownOutlined /> : <UpOutlined />}
       </li>
-      {toggle && <ul className="sub-menu">{children}</ul>}
+      <ul className={`${!toggle ? "sub-menu" : "collapsed"}`}>{children}</ul>
     </ul>
   );
 }

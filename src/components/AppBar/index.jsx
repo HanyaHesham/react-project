@@ -1,10 +1,10 @@
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  DashboardFilled,
-  InfoCircleFilled,
+  DashboardOutlined,
+  InfoCircleOutlined,
   UserOutlined,
-  PlusCircleFilled,
+  PlusCircleOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, theme, Breadcrumb } from "antd";
 import React, { useState } from "react";
@@ -32,13 +32,13 @@ function AppBar({ expand, onChange, drawerWidth }) {
   const menuItems = [
     {
       key: "/",
-      icon: <DashboardFilled />,
+      icon: <DashboardOutlined />,
       title: t("sidebar.home"),
       path: "/",
     },
     {
       key: "/about",
-      icon: <InfoCircleFilled />,
+      icon: <InfoCircleOutlined />,
       title: t("sidebar.about_us"),
       path: "/about",
     },
@@ -56,7 +56,7 @@ function AppBar({ expand, onChange, drawerWidth }) {
         },
         {
           key: "/employees/add",
-          icon: <PlusCircleFilled />,
+          icon: <PlusCircleOutlined />,
           title: t("sidebar.add"),
           path: "/employees/add",
         },
