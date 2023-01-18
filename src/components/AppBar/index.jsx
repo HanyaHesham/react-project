@@ -8,11 +8,10 @@ import {
 } from "@ant-design/icons";
 import { Layout, Menu, theme, Breadcrumb } from "antd";
 import React, { useState } from "react";
-import { NavLink, Outlet, useLocation, useMatches } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import NavItem from "../Navs/NavItem";
 import NavItemGroup from "../Navs/NavGroup";
-import router from "../../routes";
 
 const { Header, Sider, Content, Footer } = Layout;
 
@@ -85,7 +84,7 @@ function AppBar({ expand, onChange, drawerWidth }) {
       flatItems.push(item);
     }
   });
-  const activeRoute = flatItems.find((item) => item.path == location.pathname);
+  // const activeRoute = flatItems.find((item) => item.path == location.pathname);
   return (
     <Layout className="app-bar">
       <Sider trigger={null} collapsible collapsed={collapsed}>
