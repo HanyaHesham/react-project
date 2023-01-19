@@ -78,14 +78,14 @@ function AppBar({ expand, onChange, drawerWidth }) {
     },
   ];
 
-  const flatItems = [];
-  menuItems.forEach((item) => {
-    if (item.children) {
-      flatItems.push(...item.children);
-    } else {
-      flatItems.push(item);
-    }
-  });
+  // const flatItems = [];
+  // menuItems.forEach((item) => {
+  //   if (item.children) {
+  //     flatItems.push(...item.children);
+  //   } else {
+  //     flatItems.push(item);
+  //   }
+  // });
   // const activeRoute = flatItems.find((item) => item.path == location.pathname);
   return (
     <Layout className="app-bar">
