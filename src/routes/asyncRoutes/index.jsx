@@ -14,11 +14,11 @@ export const asyncRoutes = [
       breadCrumb: [
         {
           title: "sidebar.home",
-          to: "/",
+          path: "/",
+          href: "/",
         },
         {
           title: "sidebar.about_us",
-          to: "",
         },
       ],
     },
@@ -32,11 +32,11 @@ export const asyncRoutes = [
       breadCrumb: [
         {
           title: "sidebar.home",
-          to: "/",
+          path: "/",
+          href: "/",
         },
         {
           title: "sidebar.employees_record",
-          to: "",
         },
       ],
     },
@@ -50,11 +50,11 @@ export const asyncRoutes = [
       breadCrumb: [
         {
           title: "sidebar.home",
-          to: "/",
+          path: "/",
+          href: "/",
         },
         {
           title: "sidebar.add",
-          to: "",
         },
       ],
     },
@@ -68,11 +68,11 @@ export const asyncRoutes = [
       breadCrumb: [
         {
           title: "sidebar.home",
-          to: "/",
+          path: "/",
+          href: "/",
         },
         {
           title: "sidebar.departments_record",
-          to: "",
         },
       ],
     },

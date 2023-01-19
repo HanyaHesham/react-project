@@ -16,3 +16,8 @@ a {
   background: #25293c;
   border-radius: 5px;
 }
+.ant-breadcrumb-link {
+  &:hover {
+    background: transparent !important;
+  }
+}
