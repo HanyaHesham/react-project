@@ -3,7 +3,6 @@ import { lazy } from "react";
 import { asyncRoutes } from "./asyncRoutes";
 const MainLayout = lazy(() => import("../components/AppBar"));
 const HomePage = lazy(() => import("../pages/homePage"));
-const AboutPage = lazy(() => import("../pages/aboutPage"));
 
 const router = createBrowserRouter([
   {
@@ -15,12 +14,6 @@ const router = createBrowserRouter([
         href: "/",
         exact: true,
         element: <HomePage />,
-      },
-      {
-        path: "/about",
-        href: "/about",
-        exact: true,
-        element: <AboutPage />,
       },
       ...asyncRoutes,
     ],

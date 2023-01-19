@@ -6,12 +6,13 @@ import {
   UserOutlined,
   PlusCircleOutlined,
 } from "@ant-design/icons";
-import { Layout, Menu, theme, Breadcrumb } from "antd";
+import { Layout, Menu, theme } from "antd";
 import React, { useState } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useMatches } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import NavItem from "../Navs/NavItem";
 import NavItemGroup from "../Navs/NavGroup";
+import CustomBreadCrumb from "../CustomBreadCrumb";
 
 const { Header, Sider, Content, Footer } = Layout;
 
@@ -76,6 +77,7 @@ function AppBar({ expand, onChange, drawerWidth }) {
       ],
     },
   ];
+
   const flatItems = [];
   menuItems.forEach((item) => {
     if (item.children) {
@@ -146,15 +148,13 @@ function AppBar({ expand, onChange, drawerWidth }) {
           )}
         </Header>
         <Layout>
-          <Breadcrumb
+          <div
             style={{
               margin: "24px 16px 0",
             }}
           >
-            <Breadcrumb.Item>Home</Breadcrumb.Item>
-            <Breadcrumb.Item>List</Breadcrumb.Item>
-            <Breadcrumb.Item>App</Breadcrumb.Item>
-          </Breadcrumb>
+            <CustomBreadCrumb />
+          </div>
 
           <Content
             style={{
