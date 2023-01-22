@@ -3,6 +3,7 @@ import { lazy } from "react";
 import { asyncRoutes } from "./asyncRoutes";
 const MainLayout = lazy(() => import("../components/AppBar"));
 const HomePage = lazy(() => import("../pages/homePage"));
+const NotFound = lazy(() => import("../pages/notFoundPage"));
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       },
       ...asyncRoutes,
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 export default router;

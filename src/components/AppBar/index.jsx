@@ -9,7 +9,7 @@ import {
 import { Layout, Menu, theme } from "antd";
 import React, { useState } from "react";
 import { Outlet, useLocation, useMatches } from "react-router-dom";
-import { useTranslation } from "react-i18next" ;
+import { useTranslation } from "react-i18next";
 import NavItem from "../Navs/NavItem";
 import NavItemGroup from "../Navs/NavGroup";
 import CustomBreadCrumb from "../CustomBreadCrumb";
